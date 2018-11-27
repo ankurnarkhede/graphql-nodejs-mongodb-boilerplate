@@ -8,7 +8,7 @@ export default {
     userInputType,
     postType,
     postInputType
-}
+};
 
 
 
