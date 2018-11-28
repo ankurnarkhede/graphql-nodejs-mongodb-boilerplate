@@ -6,4 +6,4 @@ import Users from './multiple';
 export default {
     User,
     Users
-}
+};

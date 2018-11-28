@@ -2,6 +2,6 @@
 
 import AddPost from './add';
 
-export {
+export default {
     AddPost
 };
