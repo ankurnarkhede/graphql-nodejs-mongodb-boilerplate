@@ -21,6 +21,10 @@ export default {
         if(!newUser){
             throw new Error('Error adding User..!');
         }
+        else
+        {
+            console.log("new user added as", uModel)
+        }
         return newUser;
     }
 }

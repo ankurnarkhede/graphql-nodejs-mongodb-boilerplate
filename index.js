@@ -7,7 +7,8 @@ import schema from './graphql';
 const app = express();
 
 // mongoose connection
-mongoose.connect('mongodb://ankur:ankur1@ds239309.mlab.com:39309/nodejs-graphql-mongodb-boilerplate');
+// mongoose.connect('mongodb://ankur:ankur1@ds239309.mlab.com:39309/nodejs-graphql-mongodb-boilerplate');
+mongoose.connect('mongodb://localhost:27017/nodejs-graphql-mongodb-boilerplate');
 
 const db = mongoose.connection;
 db.on('error', () => console.log("Failed to connect to MongoDB"))

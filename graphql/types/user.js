@@ -19,6 +19,7 @@ export const userType=new GraphQLObjectType({
     fields:()=>({
         _id:{
             type: new GraphQLNonNull(GraphQLID)
+            // type:GraphQLID
         },
         email:{
             type: GraphQLString
