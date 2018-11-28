@@ -11,7 +11,7 @@ mongoose.connect('mongodb://ankur:ankur1@ds239309.mlab.com:39309/nodejs-graphql-
 
 const db = mongoose.connection;
 db.on('error', () => console.log("Failed to connect to MongoDB"))
-    .once('open', () => console.log('Connected to MongoDB'))
+    .once('open', () => console.log('Connected to MongoDB'));
 
 // registering GET / route
 app.get('/', (req, res) => {

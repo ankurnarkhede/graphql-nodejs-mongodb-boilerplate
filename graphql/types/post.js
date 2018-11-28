@@ -11,7 +11,7 @@ import {
 } from 'graphql';
 
 
-export const postType=new GraphQLInputObjectType({
+export const postType=new GraphQLObjectType({
     name: 'Post',
     fields:()=>({
         id:{
