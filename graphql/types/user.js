@@ -17,7 +17,7 @@ export const userType=new GraphQLObjectType({
     name:'User',
     description: 'User API',
     fields:()=>({
-        _id:{
+        id:{
             type: new GraphQLNonNull(GraphQLID)
             // type:GraphQLID
         },
