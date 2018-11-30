@@ -19,3 +19,4 @@ export default {
         return UserModel.findById(params.id).exec();
     }
 }
+

@@ -29,7 +29,8 @@ app.use('/graphql', graphqlHTTP(() => ({
 
 // server start
 app.listen(3000, () => {
-    console.log("graphQL API running at port 3000\nLink: http://localhost:3000/graphql");
+    var d= new Date().toLocaleString();
+    console.log("graphQL API running at port 3000\nLink: http://localhost:3000/graphql\nTimeStamp: ",d);
 
 });
 

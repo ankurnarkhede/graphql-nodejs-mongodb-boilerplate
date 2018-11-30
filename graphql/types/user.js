@@ -10,6 +10,14 @@ import {
     GraphQLList
 } from 'graphql';
 
+import {
+    GraphQLDate,
+    GraphQLTime,
+    GraphQLDateTime
+} from 'graphql-iso-date';
+
+import DateTimeScalar from '../scalars/date-time-scalar';
+
 import PostModel from '../../models/post';
 import { postType } from './post';
 
@@ -26,6 +34,9 @@ export const userType=new GraphQLObjectType({
         },
         name:{
             type:GraphQLString
+        },
+        createdAt:{
+            type: GraphQLDateTime
         },
         posts:{
             type: new GraphQLList(postType),
