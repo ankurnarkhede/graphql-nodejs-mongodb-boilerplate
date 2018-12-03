@@ -16,7 +16,6 @@ import {
     GraphQLDateTime
 } from 'graphql-iso-date';
 
-import DateTimeScalar from '../scalars/date-time-scalar';
 
 import PostModel from '../../models/post';
 import { postType } from './post';

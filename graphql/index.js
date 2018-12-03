@@ -10,7 +10,7 @@ import queries from './queries';
 
 export default new GraphQLSchema({
     query: new GraphQLObjectType({
-        name: 'Query',
+        name: 'query',
         fields: queries
     }),
     mutation: new GraphQLObjectType({
