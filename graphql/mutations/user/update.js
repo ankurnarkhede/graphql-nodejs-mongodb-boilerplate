@@ -20,8 +20,8 @@ export default {
     }
   },
   resolve (root, params) {
-    return UserModel.findByIdAndUpdate(params.id, { $set: { ...params.data } }).
-      then(data => UserModel.findById(data.id).exec()).
-      catch(err => new Error('Couldnt update user data,', err))
+    return UserModel.findByIdAndUpdate(params.id, { $set: { ...params.data } })
+      .then(data => UserModel.findById(data.id).exec())
+      .catch(err => new Error('Couldnt update user data,', err))
   }
 }
