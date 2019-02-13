@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "nodemon index.js --exec babel-node --presets es2015,stage-2",
-    "standard-js": "./node_modules/.bin/standard"
+    "standard-js": "./node_modules/.bin/standard --fix"
   },
   "dependencies": {
     "cookie-parser": "~1.4.3",
@@ -13,6 +13,7 @@
     "express-graphql": "^0.7.1",
     "graphql": "^14.0.2",
     "graphql-iso-date": "^3.6.1",
+    "graphql-playground-middleware-express": "^1.7.11",
     "http-errors": "~1.6.2",
     "mongoose": "^5.3.13",
     "morgan": "~1.9.0",

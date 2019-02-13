@@ -4,6 +4,9 @@ import graphqlHTTP from 'express-graphql'
 
 import schema from './graphql'
 
+const expressPlayground = require(
+  'graphql-playground-middleware-express').default
+
 const app = express()
 
 // mongoose connection
@@ -26,6 +29,9 @@ app.use('/graphql', graphqlHTTP(() => ({
   graphiql: true,
   pretty: true
 })))
+
+// Playground route
+app.get('/playground', expressPlayground({ endpoint: '/graphql' }))
 
 // server start
 app.listen(3000, () => {
