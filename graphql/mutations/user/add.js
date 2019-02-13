@@ -1,30 +1,27 @@
 
-
 import {
-    GraphQLNonNull
-} from "graphql";
+  GraphQLNonNull
+} from 'graphql'
 
-import {userType, userInputType} from "../../types/user";
-import UserModel from '../../../models/user';
+import { userType, userInputType } from '../../types/user'
+import UserModel from '../../../models/user'
 
 export default {
-    type: userType,
-    args:{
-        data:{
-            name: 'data',
-            type: new GraphQLNonNull(userInputType)
-        }
-    },
-    resolve(root,params){
-        const uModel=new UserModel(params.data);
-        const newUser=uModel.save();
-        if(!newUser){
-            throw new Error('Error adding User..!');
-        }
-        else
-        {
-            console.log("new user added as", uModel)
-        }
-        return newUser;
+  type: userType,
+  args: {
+    data: {
+      name: 'data',
+      type: new GraphQLNonNull(userInputType)
     }
+  },
+  resolve (root, params) {
+    const uModel = new UserModel(params.data)
+    const newUser = uModel.save()
+    if (!newUser) {
+      throw new Error('Error adding User..!')
+    } else {
+      console.log('new user added as', uModel)
+    }
+    return newUser
+  }
 }
