@@ -3,7 +3,7 @@
   "version": "1.0.1",
   "private": true,
   "scripts": {
-    "start": "nodemon index.js --exec babel-node --presets es2015,stage-2",
+    "start": "nodemon ./bin/www --exec babel-node --presets es2015,stage-2",
     "standard-js": "./node_modules/.bin/standard --fix"
   },
   "dependencies": {
@@ -11,13 +11,15 @@
     "debug": "~2.6.9",
     "express": "^4.16.4",
     "express-graphql": "^0.7.1",
-    "graphql": "^14.0.2",
+    "graphql": "^14.1.1",
     "graphql-iso-date": "^3.6.1",
     "graphql-playground-middleware-express": "^1.7.11",
+    "graphql-subscriptions": "^1.0.0",
     "http-errors": "~1.6.2",
     "mongoose": "^5.3.13",
     "morgan": "~1.9.0",
-    "pug": "2.0.0-beta11"
+    "pug": "2.0.0-beta11",
+    "subscriptions-transport-ws": "^0.9.15"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
