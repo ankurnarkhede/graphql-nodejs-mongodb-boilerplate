@@ -8,17 +8,18 @@
   },
   "dependencies": {
     "cookie-parser": "~1.4.3",
-    "debug": "~2.6.9",
+    "debug": "~4.1.1",
     "express": "^4.16.4",
     "express-graphql": "^0.7.1",
     "graphql": "^14.1.1",
     "graphql-iso-date": "^3.6.1",
     "graphql-playground-middleware-express": "^1.7.11",
     "graphql-subscriptions": "^1.0.0",
-    "http-errors": "~1.6.2",
+    "http-errors": "~1.7.1",
     "mongoose": "^5.3.13",
     "morgan": "~1.9.0",
-    "pug": "2.0.0-beta11",
+    "npm-check-updates": "^2.15.0",
+    "pug": "2.0.3",
     "subscriptions-transport-ws": "^0.9.15"
   },
   "devDependencies": {
