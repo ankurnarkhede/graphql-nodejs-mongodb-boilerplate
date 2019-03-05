@@ -1,7 +1,6 @@
 import express from 'express'
 import mongoose from 'mongoose'
 import graphqlHTTP from 'express-graphql'
-
 import schema from './graphql'
 
 const { SubscriptionServer } = require('subscriptions-transport-ws')
@@ -13,8 +12,9 @@ const app = express()
 
 // mongoose connection
 mongoose.connect(
-  'mongodb://ankur:ankur1@ds239309.mlab.com:39309/nodejs-graphql-mongodb-boilerplate')
-// mongoose.connect('mongodb://localhost:27017/nodejs-graphql-mongodb-boilerplate');
+  'mongodb://ankur:ankur1@ds239309.mlab.com:39309/nodejs-graphql-mongodb-boilerplate',
+  { useNewUrlParser: true })
+mongoose.set('useCreateIndex', true)
 
 const db = mongoose.connection
 db.on('error', () => console.log('Failed to connect to MongoDB')).
