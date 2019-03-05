@@ -15,6 +15,8 @@ export default {
     if (!users) {
       throw new Error('Error while fetching users...')
     } else {
+
+      // GraphQL publish
       socket.publish('EVENT_CREATED', {
         userQueried: users
       })
