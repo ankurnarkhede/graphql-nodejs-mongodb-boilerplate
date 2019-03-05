@@ -25,14 +25,14 @@ app.get('/', (req, res) => {
   res.send('Hello World! This is GraphQL API')
 })
 
-// grapgql api endpoint
+// GraphQL api endpoint
 app.use('/graphql', graphqlHTTP(() => ({
   schema,
   graphiql: true,
   pretty: true
 })))
 
-// Playground route
+// Playground middleware route
 app.get(
   '/playground',
   expressPlayground({
