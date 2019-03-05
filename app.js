@@ -38,7 +38,8 @@ app.get(
   expressPlayground({
     endpoint: '/graphql',
     subscriptionsEndpoint: `ws://localhost:3001/subscriptions`
-  }))
+  })
+)
 
 SubscriptionServer.create({
   schema,
