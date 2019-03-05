@@ -17,8 +17,8 @@ mongoose.connect(
 mongoose.set('useCreateIndex', true)
 
 const db = mongoose.connection
-db.on('error', () => console.log('Failed to connect to MongoDB')).
-  once('open', () => console.log('Connected to MongoDB'))
+db.on('error', () => console.log('Failed to connect to MongoDB'))
+  .once('open', () => console.log('Connected to MongoDB'))
 
 // registering GET / route
 app.get('/', (req, res) => {
